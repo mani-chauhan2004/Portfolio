@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { motion, useScroll } from 'motion/react'; 
 function ProgressBar() {
     const { scrollYProgress } = useScroll();
