@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { motion } from 'motion/react';
 type StaggeredTextProps = {
     words: string[];
     duration?: number;
@@ -17,7 +16,10 @@ const StaggeredText = ({ words, duration=1 }: StaggeredTextProps) => {
     },[])
 
     return(
-        
+        <div>
+            {duration}
+            {letterMatrix}
+        </div>
     );
 }
 
