@@ -47,14 +47,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: 2s ease-in-out;
-}
-
-:root::-webkit-scrollbar {
-  display: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   :root {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    font-size: 11px;
   }
 }
