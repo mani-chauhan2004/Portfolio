@@ -2,11 +2,17 @@
 
 function HeroName() {
   return (
-    <div className='w-screen h-screen flex items-center justify-center flex-col '>
-        <div className=' text-neutral-200 text-11xl font-orbitron font-black -tracking-tighter font-stretch-ultra-expanded scale-y-200'>MANASWEE</div>
-        <div className='text-neutral-200 text-11xl font-orbitron font-black font-stretch-200% tracking-widest scale-y-200'>CHAUHAN</div>
+    <div className=" flex items-center justify-center">
+        <div className="relative h-[140vh] w-[30vw]">
+            <div className=" absolute inset-0 bg-[#0d0d0d]/70">
+
+            </div>
+        </div>
+        <div className='relative w-[70vw] h-[140vh] flex items-center gap-38 flex-col p-12 bg-[url("/IMG/hero_image.png")] bg-top bg-cover bg-no-repeat' id="Home">
+            <div className=" absolute inset-0 bg-[#0d0d0d]/70"></div>
+        </div>
     </div>
   )
 }
 
-export default HeroName
+export default HeroName;
