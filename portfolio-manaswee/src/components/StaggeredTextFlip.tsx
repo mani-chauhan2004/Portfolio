@@ -8,7 +8,7 @@ function StaggeredTextFlip({ word, duration=0.1, stagger=0.065 }: StaggeredTextF
     
     return (
         <motion.div
-            className='relative overflow-hidden font-black text-8xl text-white font-orbitron whitespace-nowrap uppercase'
+            className=' cursor-default relative overflow-hidden font-black text-8xl text-white font-orbitron whitespace-nowrap uppercase'
             initial="initial"
             whileHover="hovered"
         >
@@ -38,7 +38,7 @@ function StaggeredTextFlip({ word, duration=0.1, stagger=0.065 }: StaggeredTextF
                 word.split('').map((char: string, index: number) => (
                     <motion.span
                         key={index}
-                        className='inline-block'
+                        className='inline-block text-blue-600'
                         variants={{
                             initial: {
                                 y: "100%",
