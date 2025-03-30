@@ -5,7 +5,7 @@ function ProgressBar() {
 
     return (
         <motion.div
-            className={`sticky top-0 left-0 origin-left w-full bg-blue-700/80 h-1 z-100`}
+            className={`sticky top-0 left-0 origin-left w-full bg-primary/80 h-1 z-100`}
             style={{scaleX: scrollYProgress}}
         >
         </motion.div>

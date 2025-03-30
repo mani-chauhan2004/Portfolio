@@ -17,6 +17,12 @@
   --text-13xl: 16rem;
   --text-14xl: 18rem;
   --text-15xl: 20rem;
+
+  --color-primary: #155DFC;
+  --color-nav: #151515;
+
+
+  --breakpoint-xs: 30rem;
   
   --font-bsr: big-shoulders, "sans-serif";
   --font-orbitron: Orbitron, "sans-serif";

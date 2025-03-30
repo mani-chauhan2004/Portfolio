@@ -3,12 +3,13 @@ type StaggeredTextFlipTextProps = {
     word: string;
     duration?: number;
     stagger?: number;
+    className?: string;
 }
-function StaggeredTextFlip({ word, duration=0.1, stagger=0.065 }: StaggeredTextFlipTextProps) {
+function StaggeredTextFlip({ word, duration=0.1, stagger=0.065, className="" }: StaggeredTextFlipTextProps) {
     
     return (
         <motion.div
-            className=' cursor-default relative overflow-hidden font-black text-8xl text-white font-orbitron whitespace-nowrap uppercase'
+            className={` cursor-default relative overflow-y-hidden font-black text-white font-orbitron whitespace-nowrap uppercase ${ className }`}
             initial="initial"
             whileHover="hovered"
         >
@@ -38,7 +39,7 @@ function StaggeredTextFlip({ word, duration=0.1, stagger=0.065 }: StaggeredTextF
                 word.split('').map((char: string, index: number) => (
                     <motion.span
                         key={index}
-                        className='inline-block text-blue-600'
+                        className='inline-block'
                         variants={{
                             initial: {
                                 y: "100%",
