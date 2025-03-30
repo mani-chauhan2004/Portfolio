@@ -1,6 +1,8 @@
 import { motion } from "motion/react"
 import ShinyText from "../ShinyText";
+import { useLockBodyScroll } from "@uidotdev/usehooks";
 function NavOverlay() {
+    useLockBodyScroll();
     const overlayVariants =  {
         initial: {
             opacity: 0,
@@ -58,7 +60,7 @@ function NavOverlay() {
     }
     return (
         <motion.div
-            className="absolute w-screen h-screen z-10 origin-top bg-nav"
+            className="absolute w-screen h-screen z-10 origin-top bg-linear-to-b from-nav/100 from-80% to-nav/95 shadow-2xl shadow-nav"
             variants={overlayVariants}
             initial="initial"
             animate="opened"
