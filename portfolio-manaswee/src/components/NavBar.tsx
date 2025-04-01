@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import CircularText from './CircularText';
 import NavIconsContainer from './NavIconsContainer';
-// import { RxHamburgerMenu } from "react-icons/rx";
 import HamIcon from './utilities/HamIcon';
 import NavOverlay from './ui/NavOverlay';
 import { AnimatePresence } from 'motion/react';
+import { useSelector } from 'react-redux';
+import { RootStateType } from './redux/Store';
 function NavBar() {
     const [isOpen, setIsOpen] = useState<true | false>(false);
+    const isMobile = useSelector((state : RootStateType) => state.responsive.isMobile);
     return (
         <>
-            <div className='flex z-100 items-center w-screen justify-between relative px-4'>
+            <div className='flex z-100 items-center w-screen justify-between px-4 relative'>
                 <CircularText
                     text="MANASWEE*CHAUHAN*"
                     onHover="speedUp"
@@ -20,6 +22,8 @@ function NavBar() {
                 <HamIcon
                     isOpen={isOpen}
                     setIsOpen={setIsOpen}
+                    isMobile={isMobile}
+                    className='relative md:hidden'
                 />
             </div>
             <AnimatePresence>

@@ -60,7 +60,7 @@ function NavOverlay() {
     }
     return (
         <motion.div
-            className="absolute w-screen h-screen z-10 origin-top bg-linear-to-b from-nav/100 from-80% to-nav/95 shadow-2xl shadow-nav"
+            className="fixed top-0 w-screen h-[100vh] z-10 origin-top bg-linear-to-b from-nav/100 from-80% to-nav/95 shadow-2xl shadow-nav"
             variants={overlayVariants}
             initial="initial"
             animate="opened"

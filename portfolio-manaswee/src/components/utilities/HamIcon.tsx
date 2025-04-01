@@ -1,23 +1,23 @@
-import { useMediaQuery } from "react-responsive";
 import { motion } from "motion/react";
 import { useEffect } from "react";
 type HamIconProps = {
     className?: string;
     isOpen: boolean;
     setIsOpen :  React.Dispatch<React.SetStateAction<boolean>>;
+    isMobile: boolean;
 }
-function HamIcon({ className="", setIsOpen, isOpen } : HamIconProps) {
+function HamIcon({ className="relative", setIsOpen, isOpen, isMobile } : HamIconProps) {
     // console.log(isOpen);
-    const isMobileView = useMediaQuery({ query: `(max-width: 48rem)`});
+    
     useEffect(() => {
-        if(!isMobileView) {
+        if(!isMobile) {
             setIsOpen(false);
         }
-    }, [isMobileView])
+    }, [isMobile]);
     return (
         <motion.div 
-            className={` relative h-20 w-20 rounded-full bg-nav z-20 shadow-gray-600 shadow-xs cursor-pointer md:hidden ${className}`}
-            onClick={() => isMobileView && setIsOpen(!isOpen)}
+            className={`h-20 w-20 rounded-full bg-nav z-20 shadow-gray-600 shadow-xs cursor-pointer ${className}`}
+            onClick={() => isMobile && setIsOpen(!isOpen)}
         >
             <motion.span 
                 animate={isOpen? "open" : "closed" }
