@@ -22,7 +22,7 @@ function App () {
     previous && setIsVisible(latest > 120 && (previous - latest) > 0);
   })
   const isMobileView = useMediaQuery("(max-width: 48rem)");
-  const isMobile = useSelector((state : RootStateType) => state.responsive.isMobile);
+  // const isMobile = useSelector((state : RootStateType) => state.responsive.isMobile);
 
   useEffect(() => {
     dispatch(setIsMobile(isMobileView));
