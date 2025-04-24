@@ -27,7 +27,7 @@ function NavBar() {
                 />
             </div>
             <AnimatePresence>
-                {isOpen && <NavOverlay/>}
+                {isOpen && <NavOverlay setIsOpen={setIsOpen}/>}
             </AnimatePresence>
         </>
     )

@@ -18,7 +18,7 @@ const StaggeredText = ({ words }: StaggeredTextProps) => {
     },[])
 
     return(
-        <div className="overflow-y-hidden rounded-xl px-4 py-1 bg-blue-600 h-[2.42rem]">
+        <div className="overflow-y-hidden rounded-xl px-4 py-1 bg-scheme-blue h-[2.42rem]">
             {
                 letterMatrix.map((letter, index) => {
                     return(

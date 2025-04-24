@@ -10,6 +10,10 @@ import { useMediaQuery } from '@uidotdev/usehooks';
 import { setIsMobile } from './components/redux/features/responsiveSlice';
 import { AnimatePresence, useScroll, useMotionValueEvent } from'motion/react';
 import NavOverlay from './components/ui/NavOverlay';
+import ProjectSection from './components/sections/ProjectSection';
+import Carousel from './components/Corousel';
+import SkillsCarousel from './components/SkillsCarousel';
+// import Marquee from './components/MarqueeCarousel'
 
 function App () {
   const [isActive, setIsActive] = useState(false);
@@ -40,7 +44,7 @@ function App () {
       />
       {
         <AnimatePresence>
-          {isActive && <NavOverlay/>}
+          {isActive && <NavOverlay setIsOpen={setIsActive}/>}
         </AnimatePresence>
       }
       <NavBar/>
@@ -50,7 +54,18 @@ function App () {
         className='ml-12 md:ml-8 text-7xl xs:text-8xl'
       />
       
+      <ProjectSection/>
+
+      <StaggeredTextFlip
+        word={"SKILLS"}
+        className='ml-12 md:ml-8 text-7xl xs:text-8xl mt-24'
+      />
+      <SkillsCarousel sign={'-'}/>
+      <Carousel words={["Passion", "Design", "Frontend", "Backend"]}/>
+      {/* <Marquee/> */}
+      <SkillsCarousel sign={'+'}/>
     </div>
+    
   )
 }
 

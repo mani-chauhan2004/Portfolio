@@ -1,7 +1,11 @@
 import { motion } from "motion/react"
 import ShinyText from "../ShinyText";
 import { useLockBodyScroll } from "@uidotdev/usehooks";
-function NavOverlay() {
+
+type navOverlayProps = {
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+function NavOverlay({setIsOpen}: navOverlayProps) {
     useLockBodyScroll();
     const overlayVariants =  {
         initial: {
@@ -60,7 +64,7 @@ function NavOverlay() {
     }
     return (
         <motion.div
-            className="fixed top-0 w-screen h-[100vh] z-10 origin-top bg-linear-to-b from-nav/100 from-80% to-nav/95 shadow-2xl shadow-nav"
+            className="fixed top-0 w-screen h-[100vh] z-10 origin-top bg-nav shadow-2xl shadow-nav"
             variants={overlayVariants}
             initial="initial"
             animate="opened"
@@ -73,10 +77,10 @@ function NavOverlay() {
                 animate="opened"
                 exit="closed"
             >
-                <a className="text-7xl font-orbitron font-normal" href="#Home"><ShinyText text={"Home"} disabled={false} speed={5}></ShinyText></a>
-                <a className="text-7xl font-orbitron font-normal" href="#"><ShinyText text={"About"} disabled={false} speed={5}></ShinyText></a>
-                <a className="text-7xl font-orbitron font-normal" href="#"><ShinyText text={"Projects"} disabled={false} speed={5}></ShinyText></a>
-                <a className="text-7xl font-orbitron font-normal" href="#"><ShinyText text={"Contact"} disabled={false} speed={5}></ShinyText></a>
+                <a onClick={() => setIsOpen(false)} className="text-7xl font-orbitron font-normal" href="#Home"><ShinyText text={"Home"} disabled={false} speed={5}></ShinyText></a>
+                <a onClick={() => setIsOpen(false)} className="text-7xl font-orbitron font-normal" href="#Home"><ShinyText text={"About"} disabled={false} speed={5}></ShinyText></a>
+                <a onClick={() => setIsOpen(false)} className="text-7xl font-orbitron font-normal" href="#Projects"><ShinyText text={"Projects"} disabled={false} speed={5}></ShinyText></a>
+                <a onClick={() => setIsOpen(false)} className="text-7xl font-orbitron font-normal" href="#Contact"><ShinyText text={"Contact"} disabled={false} speed={5}></ShinyText></a>
             </motion.div>
         </motion.div>
     )

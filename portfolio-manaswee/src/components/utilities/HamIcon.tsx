@@ -21,7 +21,7 @@ function HamIcon({ className="relative", setIsOpen, isOpen, isMobile } : HamIcon
         >
             <motion.span 
                 animate={isOpen? "open" : "closed" }
-                className="absolute right-4 rounded-full origin-center h-1 w-12 top-8 bg-white"
+                className="absolute right-4 rounded-full origin-center h-1 w-12 top-8 bg-scheme-white"
                 variants={{
                     open: {
                         y: 4,
@@ -40,7 +40,7 @@ function HamIcon({ className="relative", setIsOpen, isOpen, isMobile } : HamIcon
             </motion.span>
             <motion.span 
                 animate={isOpen? "open" : "closed"}
-                className="absolute right-4 rounded-full origin-center h-1 w-12 bottom-8 bg-white"
+                className="absolute right-4 rounded-full origin-center h-1 w-12 bottom-8 bg-scheme-white"
                 variants={{
                     open: {
                         y: -4,

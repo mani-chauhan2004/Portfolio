@@ -9,7 +9,7 @@ function StaggeredTextFlip({ word, duration=0.1, stagger=0.065, className="" }: 
     
     return (
         <motion.div
-            className={` cursor-default relative overflow-y-hidden font-black text-white font-orbitron whitespace-nowrap uppercase ${ className }`}
+            className={` cursor-default relative overflow-y-hidden font-black text-scheme-white font-orbitron whitespace-nowrap uppercase ${ className }`}
             initial="initial"
             whileHover="hovered"
         >
