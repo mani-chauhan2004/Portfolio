@@ -18,6 +18,15 @@
   --text-14xl: 18rem;
   --text-15xl: 20rem;
 
+  --spacing-100: 25rem;
+  --spacing-104: 26rem;
+  --spacing-108: 27rem;
+  --spacing-112: 28rem;
+  --spacing-116: 29rem;
+  --spacing-120: 30rem;
+  --spacing-124: 31rem;
+  --spacing-128: 32rem;
+
   --color-primary: #155DFC;
   --color-primary-new: #155DFC;
   --color-nav: #151515;
@@ -33,12 +42,14 @@
   --font-orbitron: Orbitron, "sans-serif";
 
   --animate-shine: shine 5s linear infinite;
+  --animate-spin: spin 5s linear infinite;
   
   @keyframes shine {
     0% { background-position: 100% }
     100% { background-position: -100% }
   }
   
+
 }
 
 @import "tailwindcss";

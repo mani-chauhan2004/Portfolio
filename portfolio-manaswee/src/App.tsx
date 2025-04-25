@@ -13,6 +13,7 @@ import NavOverlay from './components/ui/NavOverlay';
 import ProjectSection from './components/sections/ProjectSection';
 import Carousel from './components/Corousel';
 import SkillsCarousel from './components/SkillsCarousel';
+import ContactSection from './components/sections/ContactSection';
 // import Marquee from './components/MarqueeCarousel'
 
 function App () {
@@ -64,6 +65,11 @@ function App () {
       <Carousel words={["Passion", "Design", "Frontend", "Backend"]}/>
       {/* <Marquee/> */}
       <SkillsCarousel sign={'+'}/>
+      <StaggeredTextFlip
+        word={"CONTACT"}
+        className='ml-12 md:ml-8 text-7xl xs:text-8xl mt-24'
+      />
+      <ContactSection/>
     </div>
     
   )
