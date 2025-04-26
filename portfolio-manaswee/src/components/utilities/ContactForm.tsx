@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { sendMessage } from "../redux/features/contactFormSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch } from "../redux/Store";
+import { RootStateType } from "../redux/Store";
 
 function ContactForm() {
 
     const dispatch = useDispatch<AppDispatch>();
-
+    const response = useSelector((state : RootStateType) => state.contact.response);
+    const error = useSelector((state : RootStateType) => state.contact.error);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
@@ -69,6 +71,9 @@ function ContactForm() {
                 >
                     Message
                 </label>
+            </div>
+            <div className='relative w-full'>
+                <p>{response || error}</p>
             </div>
             <button 
                 onClick={handleExecute} 
