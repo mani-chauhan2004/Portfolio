@@ -14,6 +14,10 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
+app.get('/', (req, res) => {
+    res.status(200).json({ message:"Running properly" });
+})
 app.use('/message/api', messageRoutes);
 
 app.listen(process.env.PORT || 8080, () => {
