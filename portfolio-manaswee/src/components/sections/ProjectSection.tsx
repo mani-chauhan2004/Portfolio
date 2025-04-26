@@ -3,7 +3,7 @@ import Card from '../utilities/Card';
 
 function ProjectSection() {
     return (
-        <div id='About' className='w-full h-[80vh] bg-nav flex items-center justify-center gap-8 ring-4'>
+        <div id='About' className='w-full h-[80vh] bg-background-dark flex items-center justify-center'>
             <Card 
                 title='Log Analyser'
                 description='A tool for analyzing log files and generating reports.'

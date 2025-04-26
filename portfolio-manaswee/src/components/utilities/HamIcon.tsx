@@ -7,7 +7,6 @@ type HamIconProps = {
     isMobile: boolean;
 }
 function HamIcon({ className="relative", setIsOpen, isOpen, isMobile } : HamIconProps) {
-    // console.log(isOpen);
     
     useEffect(() => {
         if(!isMobile) {

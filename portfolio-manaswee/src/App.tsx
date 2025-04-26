@@ -5,7 +5,6 @@ import StaggeredTextFlip from './components/StaggeredTextFlip';
 import HiddenHam from './components/utilities/HiddenHam';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-// import { RootStateType } from './components/redux/Store';
 import { useMediaQuery } from '@uidotdev/usehooks';
 import { setIsMobile } from './components/redux/features/responsiveSlice';
 import { AnimatePresence, useScroll, useMotionValueEvent } from'motion/react';
@@ -14,7 +13,6 @@ import ProjectSection from './components/sections/ProjectSection';
 import Carousel from './components/Corousel';
 import SkillsCarousel from './components/SkillsCarousel';
 import ContactSection from './components/sections/ContactSection';
-// import Marquee from './components/MarqueeCarousel'
 
 function App () {
   const [isActive, setIsActive] = useState(false);

@@ -64,7 +64,7 @@ function NavOverlay({setIsOpen}: navOverlayProps) {
     }
     return (
         <motion.div
-            className="fixed top-0 w-screen h-[100vh] z-10 origin-top bg-nav shadow-2xl shadow-nav"
+            className="fixed top-0 w-screen h-[100vh] z-200 origin-top bg-nav shadow-2xl shadow-nav"
             variants={overlayVariants}
             initial="initial"
             animate="opened"
