@@ -7,8 +7,8 @@ type formDataType = {
 }
 export const sendMessage = createAsyncThunk<AxiosResponse<any, any>, formDataType, {rejectValue: any}>('contactForm/sendMessage', async (formData, { rejectWithValue }) => {
     try {
-        const response = await axios.post(`http://localhost:8080/message/api/send-message`, formData);
-        console.log(response.data);
+        const response = await axios.post(`${import.meta.env.VITE_BACKEND_BASE_URL}/message/api/send-message`, formData);
+        console.log(response.data)
         return response.data;
     }catch(error: any) {
         return rejectWithValue(error.response?.data || 'Something went wrong');
